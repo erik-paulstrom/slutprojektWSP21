@@ -10,22 +10,36 @@ nav {
     text-decoration: none;
     font-size: 1.2em;
     font-weight:800;
-    background: rgb(247, 199, 42);
+    background: rgb(247, 141, 42);
+    border-bottom: .1rem solid black;
     height: 10vh;
     display:flex;
     justify-content:space-around;
     align-items:center;
   }
 
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: .11rem white;
+  font-size: 2rem;
+}
+
 h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: blue;
+  font-size: 3rem;
 }
 
 form {
     display: flex; 
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+}
+
+input {
+  border: 2px solid lightgray;
+  border-radius: 4px;
 }
