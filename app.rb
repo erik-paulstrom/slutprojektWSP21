@@ -9,6 +9,31 @@ get('/') do
     slim(:register)
 end 
 
+get('/showlogin') do 
+    slim(:login)
+end 
+
+post('/login') do 
+    username = params[:username]
+    password = params[:password]
+    db = SQLite3::Database.new('db/guitar_webshop.db')
+    db.result_as_hash = true
+    result = db.execute('SELECT * FROM users WHERE username = ?',username).first
+    pwdigest = result["pwdigest"]
+    id = result["id"]
+
+    if BCrypt::Password.new(pwdigest) == password
+        redirect('/shop')
+    else
+        "Fel lösenord!"
+    end
+end
+
+get('/shop') do 
+    slim(:"shop/index")
+end
+
+
 post('/users/new') do 
     username = params[:username]
     password = params[:password]

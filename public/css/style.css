@@ -32,6 +32,12 @@ h1 {
   font-size: 3rem;
 }
 
+#login_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 form {
     display: flex; 
     justify-content: center;
