@@ -17,7 +17,7 @@ post('/login') do
     username = params[:username]
     password = params[:password]
     db = SQLite3::Database.new('db/guitar_webshop.db')
-    db.result_as_hash = true
+    db.results_as_hash = true
     result = db.execute('SELECT * FROM users WHERE username = ?',username).first
     pwdigest = result["pwdigest"]
     id = result["id"]
@@ -32,7 +32,6 @@ end
 get('/shop') do 
     slim(:"shop/index")
 end
-
 
 post('/users/new') do 
     username = params[:username]
