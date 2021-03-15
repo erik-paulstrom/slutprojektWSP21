@@ -75,4 +75,57 @@ input {
   font-size: 2rem;
   display: flex;
   justify-content: center;
+  
+}
+
+.A1 img {
+  width: 100%;
+}
+
+.A2 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.A2 img {
+  width: 100%;
+}
+
+.A3 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.A3 img {
+  width: 100%;
+}
+
+.A4 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.A4 img {
+  width: 100%;
+}
+
+.A5 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.A5 img {
+  width: 100%;
 }
