@@ -11,7 +11,7 @@ nav {
     text-decoration: none;
     font-size: 1.2em;
     font-weight:800;
-    background: rgb(247, 141, 42);
+    background: rgb(42, 107, 247);
     border-bottom: .1rem solid black;
     height: 10vh;
     display:flex;
@@ -75,11 +75,12 @@ input {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
 .A1 img {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .A2 {
@@ -87,11 +88,13 @@ input {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
 .A2 img {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  rotate: 45deg;
 }
 
 .A3 {
@@ -99,11 +102,12 @@ input {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
 .A3 img {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .A4 {
@@ -111,11 +115,12 @@ input {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
 .A4 img {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .A5 {
@@ -123,9 +128,62 @@ input {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
 .A5 img {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.A6 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A6 img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.A7{
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A7 img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.A8 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A8 img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.A9 {
+  border: 1px solid black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A9 img {
+  max-width: 80%;
+  max-height: 80%;
 }
