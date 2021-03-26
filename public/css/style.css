@@ -76,6 +76,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A1 img {
@@ -89,6 +90,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A2 img {
@@ -103,6 +105,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A3 img {
@@ -112,10 +115,12 @@ input {
 
 .A4 {
   border: 1px solid black;
+  border-top: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A4 img {
@@ -125,10 +130,12 @@ input {
 
 .A5 {
   border: 1px solid black;
+  border-top: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A5 img {
@@ -138,10 +145,12 @@ input {
 
 .A6 {
   border: 1px solid black;
+  border-top: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A6 img {
@@ -151,10 +160,12 @@ input {
 
 .A7{
   border: 1px solid black;
+  border-top: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A7 img {
@@ -164,10 +175,12 @@ input {
 
 .A8 {
   border: 1px solid black;
+  border-top: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A8 img {
@@ -177,10 +190,12 @@ input {
 
 .A9 {
   border: 1px solid black;
+  border-top: none;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .A9 img {
