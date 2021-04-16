@@ -23,6 +23,7 @@ post('/login') do
     id = result["id"]
 
     if BCrypt::Password.new(pwdigest) == password
+        session[:user_id] = id 
         redirect('/shop')
     else
         "Fel lösenord!"
@@ -54,13 +55,46 @@ end
 # 4. - products.each do |product|
 # a href="/products/#{product["id"]" #{product["name"]} 
 
-post('/buy/guitar') do 
+post('/photos/1') do 
 
-    id = params[:id]
-    guitar = params[:guitar]
+    user_id = session[:user_id]
+    guitar = params[:id]
 
     db = SQLite3::Database.new('db/guitar_webshop.db')
     db.results_as_hash = true
-    result = db.execute('SELECT * FROM products WHERE guitars = ?',guitars).first
+    result = db.execute('SELECT * FROM products WHERE id = ?',id).first
+
+    redirect('/checkout')
 
 end 
+
+get('/seed') do 
+
+    db = SQLite3::Database.new('db/guitar_webshop.db')
+    db.results_as_hash = true
+    db.execute('DROP TABLE if exists products')
+
+    db.execute('CREATE TABLE "products" (
+        "id"	INTEGER,
+        "name"	TEXT NOT NULL UNIQUE,
+        "img" TEXT NOT NULL,
+        PRIMARY KEY("id" AUTOINCREMENT)
+    );')
+
+    guitars = [
+        {name: "Telecaster1", img: "img/tele1.png"},
+        {name: "Telecaster2", img: "img/tele2.jpg"},
+        {name: "Telecaster3", img: "img/tele3.jpg"},
+        {name: "Strata1", img: "img/strata1.jpg"},
+        {name: "Strata2", img: "img/strata2.jpg"},
+        {name: "Strata3", img: "img/strata3.jpg"},
+        {name: "LesPaul1", img: "img/lespaul1.jpg"},
+        {name: "LesPaul2", img: "img/lespaul2.png"},
+        {name: "LesPaul3", img: "img/lespaul3.jpeg"},
+    ]
+
+    guitars.each do |product|
+        db.execute('INSERT INTO products (name, img) values(?,?)', product[:name], product[:img])
+    end
+end 
+
