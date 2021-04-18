@@ -46,7 +46,6 @@ post('/users/new') do
     else
         "Skriv ett lösenord som matchar de angivna."
     end
-
 end 
 
 # 1. Lägg till i tabell
@@ -55,21 +54,30 @@ end
 # 4. - products.each do |product|
 # a href="/products/#{product["id"]" #{product["name"]} 
 
-post('/photos/1') do 
+get('/checkout') do 
+    slim(:"shop/checkout")
+end 
 
+post('/photos/1') do 
     user_id = session[:user_id]
     guitar = params[:id]
+    id = params[:id]
 
     db = SQLite3::Database.new('db/guitar_webshop.db')
-    db.results_as_hash = true
     result = db.execute('SELECT * FROM products WHERE id = ?',id).first
-
     redirect('/checkout')
+end 
+post('/photos/2') do 
+    user_id = session[:user_id]
+    guitar = params[:id]
+    id = params[:id]
 
+    db = SQLite3::Database.new('db/guitar_webshop.db')
+    result = db.execute('SELECT * FROM products WHERE id = ?',id).first
+    redirect('/checkout')
 end 
 
 get('/seed') do 
-
     db = SQLite3::Database.new('db/guitar_webshop.db')
     db.results_as_hash = true
     db.execute('DROP TABLE if exists products')
